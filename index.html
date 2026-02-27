@@ -36,6 +36,8 @@
       --text: #f4f4ff;
       --text2: #9999bb;
       --text3: #666688;
+      --line-green: #06C755;
+      --line-glow: rgba(6,199,85,0.22);
     }
 
     html { scroll-behavior: smooth; }
@@ -223,6 +225,20 @@
       border-color: rgba(59,122,255,0.3);
     }
 
+    .link-btn.line-featured {
+      background: linear-gradient(135deg, rgba(6,199,85,0.14), rgba(28,28,46,0.9));
+      border-color: rgba(6,199,85,0.3);
+    }
+
+    .link-btn.line-featured::before {
+      background: linear-gradient(90deg, var(--line-glow), transparent);
+    }
+
+    .link-btn.line-featured:hover {
+      border-color: rgba(6,199,85,0.5);
+      box-shadow: 0 8px 32px rgba(6,199,85,0.18), 0 2px 8px rgba(0,0,0,0.3);
+    }
+
     .link-icon {
       font-size: 20px;
       width: 28px;
@@ -266,6 +282,10 @@
       color: var(--accent2);
     }
 
+    .link-btn.line-featured:hover .link-arrow {
+      color: var(--line-green);
+    }
+
     /* Badge */
     .badge {
       font-family: 'Space Mono', monospace;
@@ -282,6 +302,11 @@
       right: 16px;
       box-shadow: 0 2px 10px rgba(255,77,109,0.6);
       white-space: nowrap;
+    }
+
+    .badge-new {
+      background: var(--line-green);
+      box-shadow: 0 2px 10px rgba(6,199,85,0.6);
     }
 
     .footer {
@@ -344,6 +369,24 @@
       </h1>
       <p class="profile-title">外資系SEOマーケター｜Kindle著者｜Udemy講師</p>
       <p class="profile-desc">SEO歴10年以上。テクニカルSEO × Python × 海外展開を実践から発信。</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- LINE公式アカウント -->
+    <p class="section-label">// 公式LINE</p>
+    <div class="links">
+
+      <a class="link-btn line-featured" href="https://lin.ee/63es1ta" target="_blank" rel="noopener" data-link="line">
+        <span class="badge badge-new">NEW</span>
+        <span class="link-icon">💬</span>
+        <span class="link-text">
+          <span class="link-label">公式LINE — AI時代のSEO戦略</span>
+          <span class="link-sub">最新SEO情報・無料資料の限定配布はこちら</span>
+        </span>
+        <span class="link-arrow">›</span>
+      </a>
+
     </div>
 
     <div class="divider"></div>
